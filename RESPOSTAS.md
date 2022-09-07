@@ -17,13 +17,13 @@
  Usei o comando `sudo nano /etc/ssh/sshd_config` e alterei o PasswordAuthentication e o PermitRootLogin para 'no'.
 
 # 3.2 - 
- Dentro do diretório /home/vagrant/.ssh, criei o par de chaves com o comando `ssh-keygen -t ecdsa -b 256 -C "vagrant@10.0.0.105", e adicionei a chave pública no arquivo authorized_keys `cat vagrant.pub > authorized_keys`.
+ Dentro do diretório /home/vagrant/.ssh, criei o par de chaves com o comando `ssh-keygen -t ecdsa -b 256 -C "vagrant@10.0.0.105"`, e adicionei a chave pública no arquivo authorized_keys `cat vagrant.pub > authorized_keys`.
 
 # 3.3 - 
  Alterei a senha do usuário devel.
  Instalei o git na VM e baixei a chave para a home do usuário vagrant.
- Decodifiquei e descompactei a chave com o comando 'base64 -d id_rsa-desafio-linux-devel.gz.b64 | gzip -d > id_rsa-desafio-linux'.
- Com o comando ssh `devel@10.0.0.105` já foi possível se conectar via ssh com o usuário devel.
+ Decodifiquei e descompactei a chave com o comando `base64 -d id_rsa-desafio-linux-devel.gz.b64 | gzip -d > id_rsa-desafio-linux`.
+ Com o comando `ssh devel@10.0.0.105` já foi possível se conectar via ssh com o usuário devel.
  
 # 4 - 
  Com o comando `sudo nano /etc/nginx/nginx.conf` editei o arquivo de configuração nginx, nos parâmetros do servidor, ele apontava para a porta 90, alterei para 80, e adicionei um ';' ao final da última linha.
