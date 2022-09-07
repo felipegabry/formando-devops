@@ -9,7 +9,7 @@
 
 # 2.
 # 2.1 - 
- Adicionei o grupo getup com o comando `sudo groupadd -g 2222 getup`, Criei o usuário getup com o comando `sudo useradd -g 2222 -G bin -u 1111 getup.
+ Adicionei o grupo getup com o comando `sudo groupadd -g 2222 getup`, Criei o usuário getup com o comando `sudo useradd -g 2222 -G bin -u 1111 getup`.
  Editei o arquivo `/etc/sudoers` e adicionei ao final do arquivo a linha (getup  ALL=(ALL) NOPASSWD:ALL).
 
 # 3.
